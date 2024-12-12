@@ -15,15 +15,76 @@ body {
   background-color: #121720;
 }
 
-#search {
-  margin: 20px auto;
-  width: 30%;
+.container {
+  display: flex;
+  width:60%;
+  margin: 0 auto;
+  justify-content: space-around;
+  height: 500px;
+  padding:20px;
 }
 
-#search input{
+#search {
+  margin: 20px auto;
+  width: 50%;
+
+}
+
+#search #searchbar{
+  display: inline-block;
   margin: 0 auto;
-  width: 100%;
+  width: 70%;
   padding:10px;
   font-size: 20px;
   border-radius: 20px;
+}
+
+#search div {
+  display: inline-block;
+  width: 25%;
+}
+
+#search div input,  #search div button{
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+.tracklist {
+  width:250px;
+  background-color: black;
+  height: 100%;
+  overflow: auto;
+}
+
+.track {
+  background-color:#282c34;
+  color:white;
+  margin: 10px;;
+  border-radius: 20px;
+  padding:10px;
+}
+
+.trackContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.track button {
+  width: 100%;
+}
+
+#playlist {
+  box-sizing: border-box;
+  width:90%;
+  margin:10px;
+  padding:10px;
+}
+
+#playobj{
+  color: white;
+  font-weight: bold;
+  width:50%;
+  margin:20px auto;
 }

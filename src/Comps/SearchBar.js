@@ -1,18 +1,25 @@
-import React, {useState} from "react";
+import React from "react";
 import '../App.css';
 
-function SearchBar(){
-    const [search, setSearch] = useState()
+function SearchBar({currentSearch, searchSetter}){
 
     function changeHandler({target}){
-        setSearch(target.value)
-        console.log(target.value)
+        searchSetter(target.value)
+    }
+
+    function handleSubmit(e){
+        e.preventDefault()
     }
 
     return (
-        <div id='search'>
-            <input value={search} onChange={changeHandler} />
-        </div>
+        <form id='search' onSubmit={handleSubmit}>
+            <input id="searchbar" placeholder="useme" value={currentSearch} onChange={changeHandler} />
+            <div>
+            <input type='submit' disabled={!currentSearch} />
+            <button onClick={()=>{searchSetter('')}}>reset</button>
+            </div>
+
+        </form>
     )
 }
 
